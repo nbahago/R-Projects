@@ -9,10 +9,8 @@ View(covid.data)
 selected_data <- covid.data %>% select("continent","location", "date", "population" ,"total_cases", "total_deaths", "
                                        people_fully_vaccinated","female_smokers","male_smokers", "population_density")
                                        
-View(selected_data)
-
-# Manipulate the data using piping 
-
+View(selected_data) #View data for analysis 
+# Manipulate the data using piping and installing the tidyverse package for data  manipulation
 library(tidyverse)
 
 new_selected <- selected_data %>% 
@@ -21,3 +19,4 @@ new_selected <- selected_data %>%
 View(new_selected)
 write.csv(new_selected, "Covid.csv", row.names=FALSE)
 getwd()
+
